@@ -20,9 +20,9 @@ const initialCarState = {
 export function carReducer(state = initialCarState, action) {
     //console.log(action)
   switch (action.types) {
-    case types.ADD_ITEM:
+    case types.BUY_ITEM:
       return {};
-    case types.REMOVE_ITEM:
+    case types.REMOVE_FEATURE:
       return {};
     default:
       return state;

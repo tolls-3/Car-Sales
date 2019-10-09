@@ -8,30 +8,36 @@ import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
 export function App(props) {
-  console.log(props)
-  const removeItem = item => {
+  //console.log(props)
+  const removeFeature = item => {
     // dispatch an action here to remove an item
   };
 
-  const addItem = item => {
+  const buyItem = item => {
     // dipsatch an action here to add an item
   };
 
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={state.car} />
-        <AddedFeatures car={state.car} />
+        <Header car={props.car.car} />
+        <AddedFeatures car={props.car} />
       </div>
       <div className="box">
-        <AdditionalFeatures store={state.store} />
-        <Total car={state.car} additionalPrice={state.additionalPrice} />
+        <AdditionalFeatures store={props.car.store} />
+        <Total
+          car={props.car.car}
+          additionalPrice={props.car.additionalPrice}
+        />
       </div>
     </div>
   );
 }
 
 export default connect(
-  state => state,
+  state => {
+    return state;
+  },
+
   actionCreators
 )(App);
