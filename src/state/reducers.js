@@ -17,7 +17,7 @@ const initialShopState = [
 ];
 
 export function carReducer(state = initialCarState, action) {
-  console.log(state, action);
+  //console.log(state, action);
   switch (action.type) {
     case types.REMOVE_FEATURE:
       return {
