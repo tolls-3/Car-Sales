@@ -9,13 +9,14 @@ import Total from "./components/Total";
 
 export function App(props) {
   //debugger;
-  const removeFeature = item => {
-    // dispatch an action here to remove an item
-  };
+  // const removeFeature = item => {
+  //   // dispatch an action here to remove an item
+  // };
 
-  const buyItem = item => {
-    // dipsatch an action here to add an item
-  };
+  // const buyItem = item => {
+  //   // dipsatch an action here to add an item
+  //   props.buyItem(item);
+  // };
 
   return (
     <div className="boxes">
@@ -24,20 +25,14 @@ export function App(props) {
         <AddedFeatures car={props.car} />
       </div>
       <div className="box">
-        <AdditionalFeatures store={props.shop} />
-        <Total
-          car={props.car}
-          additionalPrice={props.car.additionalPrice}
-        />
+        <AdditionalFeatures store={props.shop} buyItem={props.buyItem}/>
+        <Total car={props.car} additionalPrice={props.car.additionalPrice} />
       </div>
     </div>
   );
 }
 
 export default connect(
-  state => {
-    return state;
-  },
-
+  state => state,
   actionCreators
 )(App);

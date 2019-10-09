@@ -15,21 +15,28 @@ const initialShopState = [
   { id: 3, name: "Premium sound system", price: 500 },
   { id: 4, name: "Rear spoiler", price: 250 }
 ];
-
+//debugger;
 export function carReducer(state = initialCarState, action) {
-  //console.log(action)
-  switch (action.types) {
-    case types.BUY_ITEM:
-      return {};
+    console.log(state,action)
+  switch (action.type) {
     case types.REMOVE_FEATURE:
-      return {};
+      return state;
+
+    case types.BUY_ITEM:
+      //console.log(state, action);
+      return {
+        ...state,
+        additionalPrice: state.additionalPrice + action.payload.price,
+        features: state.features.concat(action.payload)
+      };
+
     default:
       return state;
   }
 }
 
 export function storeReducer(state = initialShopState, action) {
-  switch (action.types) {
+  switch (action.type) {
     default:
       return state;
   }
