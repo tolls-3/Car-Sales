@@ -15,7 +15,7 @@ const initialShopState = [
   { id: 3, name: "Premium sound system", price: 500 },
   { id: 4, name: "Rear spoiler", price: 250 }
 ];
-//debugger;
+
 export function carReducer(state = initialCarState, action) {
   console.log(state, action);
   switch (action.type) {

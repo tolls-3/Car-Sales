@@ -8,7 +8,7 @@ import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
 export function App(props) {
-  //debugger
+  
   return (
     <div className="boxes">
       <div className="box">
