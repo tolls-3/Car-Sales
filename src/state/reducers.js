@@ -17,10 +17,16 @@ const initialShopState = [
 ];
 //debugger;
 export function carReducer(state = initialCarState, action) {
-    console.log(state,action)
+  console.log(state, action);
   switch (action.type) {
     case types.REMOVE_FEATURE:
-      return state;
+      return {
+        ...state,
+        additionalPrice: state.additionalPrice - action.payload.price,
+        features: state.features.filter(
+          payload => payload.id !== action.payload.id
+        )
+      };
 
     case types.BUY_ITEM:
       //console.log(state, action);
