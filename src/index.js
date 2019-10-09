@@ -9,7 +9,8 @@ import "bulma/css/bulma.css";
 import "./styles.scss";
 
 const bigStore = combineReducers({
-  car: reducers.carReducer
+  car: reducers.carReducer,
+  shop: reducers.storeReducer,
 });
 
 const store = createStore(

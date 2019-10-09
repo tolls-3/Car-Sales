@@ -8,7 +8,7 @@ import AdditionalFeatures from "./components/AdditionalFeatures";
 import Total from "./components/Total";
 
 export function App(props) {
-  //console.log(props)
+  //debugger;
   const removeFeature = item => {
     // dispatch an action here to remove an item
   };
@@ -20,13 +20,13 @@ export function App(props) {
   return (
     <div className="boxes">
       <div className="box">
-        <Header car={props.car.car} />
+        <Header car={props.car} />
         <AddedFeatures car={props.car} />
       </div>
       <div className="box">
-        <AdditionalFeatures store={props.car.store} />
+        <AdditionalFeatures store={props.shop} />
         <Total
-          car={props.car.car}
+          car={props.car}
           additionalPrice={props.car.additionalPrice}
         />
       </div>
