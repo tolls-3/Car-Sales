@@ -1,9 +1,6 @@
 import * as types from "./actionTypes";
 
-
-
 export const removeFeature = item => {
-    //console.log(item)
   // dispatch an action here to remove an item
   return { type: types.REMOVE_FEATURE, payload: item };
 };

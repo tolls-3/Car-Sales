@@ -27,7 +27,6 @@ export function carReducer(state = initialCarState, action) {
           payload => payload.id !== action.payload.id
         )
       };
-
     case types.BUY_ITEM:
       //console.log(state, action);
       return {
@@ -35,7 +34,6 @@ export function carReducer(state = initialCarState, action) {
         additionalPrice: state.additionalPrice + action.payload.price,
         features: state.features.concat(action.payload)
       };
-
     default:
       return state;
   }

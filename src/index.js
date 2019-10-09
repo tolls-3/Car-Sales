@@ -10,7 +10,7 @@ import "./styles.scss";
 
 const bigStore = combineReducers({
   car: reducers.carReducer,
-  shop: reducers.storeReducer,
+  shop: reducers.storeReducer
 });
 
 const store = createStore(
@@ -23,6 +23,5 @@ ReactDOM.render(
   <Provider store={store}>
     <App />
   </Provider>,
-
   rootElement
 );
